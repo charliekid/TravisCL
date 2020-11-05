@@ -15,6 +15,10 @@ android:
     - build-tools-30.0.2
     - android-27
     - extra
+    licenses:
+      - 'android-sdk-preview-license-.+'
+      - 'android-sdk-license-.+'
+      - 'google-gdk-license-.+'
 before_install:
   - chmod +x gradlew
   - yes | sdkmanager "platforms;android-27"
