@@ -6,6 +6,7 @@
 #  - oraclejdk8
 
 language: android
+dist: trusty
 android:
   components:
     - tools # to get the new `repository-11.xml`
@@ -13,8 +14,9 @@ android:
     - platform-tools
     - build-tools-27.0.3
     - android-27
+    - extra
 before_install:
-  - chmod +x gradlew build connectedCheck
+  - chmod +x gradlew
   - yes | sdkmanager "platforms;android-27"
-script:
-  - ./gradlew build connectedCheck
+#script:
+#  - ./gradlew build connectedCheck
